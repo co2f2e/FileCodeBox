@@ -51,11 +51,19 @@ fi
 cat << "EOF" > start.sh
 #!/bin/bash
 clear
-source venv/bin/activate
-nohup python main.py > output.log 2>&1 &
+PROJECT_DIR="/usr/local/FileCodeBox"
+VENV_DIR="$PROJECT_DIR/venv"
+source "$VENV_DIR/bin/activate"
+nohup python "$PROJECT_DIR/main.py" > "$PROJECT_DIR/output.log" 2>&1 &
 PID=$!
-echo
-echo "服务正在后台运行 PID: $PID"
+sleep 2
+if ps -p $PID > /dev/null; then
+    echo
+    echo "服务已成功启动，PID: $PID"
+else
+    echo
+    echo "服务启动失败，请检查日志文件：$PROJECT_DIR/output.log"
+fi
 EOF
 
 chmod +x start.sh

@@ -54,7 +54,7 @@ clear
 PROJECT_DIR="/usr/local/FileCodeBox"
 VENV_DIR="$PROJECT_DIR/venv"
 source "$VENV_DIR/bin/activate"
-nohup python "$PROJECT_DIR/main.py" > "$PROJECT_DIR/output.log" 2>&1 &
+nohup python main.py" > "$PROJECT_DIR/output.log" 2>&1 &
 PID=$!
 sleep 2
 if ps -p $PID > /dev/null; then

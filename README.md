@@ -2,7 +2,9 @@
   FileCodeBox - 文件快递柜
 </h1>
 FileCodeBox 是一个基于 FastAPI + Vue3 开发的轻量级文件分享工具。它允许用户通过简单的方式分享文本和文件，接收者只需要一个提取码就可以取得文件，就像从快递柜取出快递一样简单。
+
 <hr>
+
 * 安装
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/install.sh)

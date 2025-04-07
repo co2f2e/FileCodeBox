@@ -49,12 +49,8 @@ https://yourdomain
 ```bash
 https://yourdomain/#/admin
 ```
-* 初始密码
-```bash
-FileCodeBox2023
-```
 ## 注意
-初次使用务必修改密码
+初次使用务必修改密码`FileCodeBox2023`
 ## 测试环境
 Debian12
 已安装Nginx，申请了域名证书

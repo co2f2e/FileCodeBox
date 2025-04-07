@@ -23,6 +23,11 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/i
 bash /usr/local/FileCodeBox/start.sh
 ```
 
+* 停止服务
+```bash
+bash /usr/local/FileCodeBox/stop.sh
+```
+
 * 卸载
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/uninstall.sh)

@@ -14,7 +14,8 @@ cd /usr/local
 if [ ! -d "FileCodeBox" ]; then
     git clone https://github.com/vastsa/FileCodeBox.git
 else
-    echo "FileCodeBox 仓库已存在，跳过克隆。"
+    echo "FileCodeBox 仓库已存在，脚本终止。"
+    exit 0
 fi
 
 if [ -f "$FILE_PATH" ]; then

@@ -62,12 +62,12 @@ chmod +x start.sh
 cat << "EOF" > stop.sh
 #!/bin/bash
 clear
-SERVICE_PID=\$(ps aux | grep '[p]ython main.py' | awk '{print \$2}')
-if [ -z "\$SERVICE_PID" ]; then
-    echo "未找到正在运行的服务进程。"
+SERVICE_PID=$(pgrep -f 'python main.py')
+if [ -n "$SERVICE_PID" ]; then
+    kill "$SERVICE_PID"
+    echo "服务进程已终止，PID: $SERVICE_PID"
 else
-    kill "\$SERVICE_PID"
-    echo "服务进程已终止，PID: \$SERVICE_PID"
+    echo "未找到正在运行的服务进程。"
 fi
 EOF
 

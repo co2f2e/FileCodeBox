@@ -5,11 +5,7 @@ FileCodeBox 是一个基于 FastAPI + Vue3 开发的轻量级文件分享工具�
 
 <hr>
 
-* 安装
-```bash
-bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/install.sh)
-```
-* NGINX配置
+## NGINX配置
 ```bash
     location / {
         proxy_pass  http://127.0.0.1:12345/;
@@ -22,6 +18,11 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/i
         sendfile on;
         tcp_nopush on; 
     }
+```
+## 使用
+* 安装
+```bash
+bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/install.sh)
 ```
 * 启动服务
 ```bash
@@ -39,15 +40,18 @@ bash /usr/local/FileCodeBox/stop.sh
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/uninstall.sh)
 ```
-* 访问路径
+## 访问
+* 访问地址
 ```bash
-https://yourdomian
+https://yourdomain
 ```
-* 后台路径
+* 后台地址
 ```bash
-https://yourdomian/#/admin
+https://yourdomain/#/admin
 ```
 * 初始密码
 ```bash
 FileCodeBox2023
 ```
+## 注意
+初次使用务必修改密码

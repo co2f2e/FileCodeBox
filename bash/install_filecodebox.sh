@@ -47,7 +47,7 @@ else
     echo "未找到 requirements.txt 文件，请确保该文件存在于当前目录。"
 fi
 
-cat << 'EOF' > start.sh
+cat << "EOF" > start.sh
 #!/bin/bash
 clear
 source venv/bin/activate
@@ -58,4 +58,4 @@ EOF
 
 chmod +x start.sh
 
-echo "请执行 $(pwd) 下的 filecodebox.sh 脚本来运行服务，并通过配置 Nginx 进行反向代理。"
+echo "请执行 $(pwd) 下的 start.sh 脚本来运行服务，并通过配置 Nginx 进行反向代理。"

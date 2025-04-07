@@ -54,7 +54,7 @@ clear
 PROJECT_DIR="/usr/local/FileCodeBox"
 VENV_DIR="$PROJECT_DIR/venv"
 source "$VENV_DIR/bin/activate"
-nohup python main.py" > "$PROJECT_DIR/output.log" 2>&1 &
+nohup python "$PROJECT_DIR/main.py" > "$PROJECT_DIR/output.log" 2>&1 &
 PID=$!
 sleep 2
 if ps -p $PID > /dev/null; then
@@ -71,7 +71,8 @@ chmod +x start.sh
 cat << "EOF" > stop.sh
 #!/bin/bash
 clear
-SERVICE_PID=$(pgrep -f 'python main.py')
+PROJECT_DIR="/usr/local/FileCodeBox"
+SERVICE_PID=$(pgrep -f "python $PROJECT_DIR/main.py")
 if [ -n "$SERVICE_PID" ]; then
     kill "$SERVICE_PID"
     echo "服务进程已终止，PID: $SERVICE_PID"

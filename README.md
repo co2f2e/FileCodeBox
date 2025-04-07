@@ -29,6 +29,10 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/i
 ```bash
 bash /usr/local/FileCodeBox/start.sh
 ```
+* 查看日志
+```bash
+tail -f /usr/local/FileCodeBox/output.log
+```
 
 * 停止服务
 ```bash

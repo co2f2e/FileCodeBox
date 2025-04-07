@@ -1,6 +1,6 @@
 * 安装
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/install_filecodebox.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/install.sh)
 ```
 
 * NGINX配置
@@ -17,3 +17,13 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/i
         tcp_nopush on; 
     }
 ```
+
+* 启动服务
+```bash
+bash /usr/local/FileCodeBox/start.sh
+```
+
+* 卸载
+```bash
+bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/uninstall.sh)
+``` 

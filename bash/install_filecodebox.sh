@@ -9,13 +9,13 @@ if ! command -v git &>/dev/null; then
     sudo apt install -y git
 fi
 
+cd /usr/local
+
 if [ ! -d "FileCodeBox" ]; then
     git clone https://github.com/vastsa/FileCodeBox.git
 else
     echo "FileCodeBox 仓库已存在，跳过克隆。"
 fi
-
-cd FileCodeBox || exit
 
 if [ -f "$FILE_PATH" ]; then
     cp "$FILE_PATH" "${FILE_PATH}.bak"
@@ -39,7 +39,7 @@ else
     echo "未找到 requirements.txt 文件，请确保该文件存在于当前目录。"
 fi
 
-cat << 'EOF' > filecodebox.sh
+cat << 'EOF' > start.sh
 #!/bin/bash
 clear
 source venv/bin/activate
@@ -48,6 +48,6 @@ echo
 echo "服务正在后台运行 PID： \$!"
 EOF
 
-chmod +x filecodebox.sh
+chmod +x start.sh
 
-echo "请执行当前目录下的 filecodebox.sh 脚本来运行服务，并通过配置 Nginx 进行反向代理。"
+echo "请执行 $(pwd) 下的 filecodebox.sh 脚本来运行服务，并通过配置 Nginx 进行反向代理。"

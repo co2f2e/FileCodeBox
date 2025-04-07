@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
-FILE_PATH="main.py"
-VENV_DIR="venv"
+FILE_PATH="/usr/local/FileCodeBox/main.py"
+VENV_DIR="/usr/local/FileCodeBox/venv"
 
 if ! command -v git &>/dev/null; then
     echo "Git 未安装，正在安装 Git..."

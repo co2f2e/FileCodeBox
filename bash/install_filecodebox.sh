@@ -52,8 +52,9 @@ cat << "EOF" > start.sh
 clear
 source venv/bin/activate
 nohup python main.py > output.log 2>&1 &
+PID=$!
 echo
-echo "服务正在后台运行 PID： \$!"
+echo "服务正在后台运行 PID: $PID"
 EOF
 
 chmod +x start.sh

@@ -62,9 +62,7 @@ chmod +x start.sh
 cat << "EOF" > stop.sh
 #!/bin/bash
 clear
-
 SERVICE_PID=\$(ps aux | grep '[p]ython main.py' | awk '{print \$2}')
-
 if [ -z "\$SERVICE_PID" ]; then
     echo "未找到正在运行的服务进程。"
 else

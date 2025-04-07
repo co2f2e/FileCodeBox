@@ -59,4 +59,20 @@ EOF
 
 chmod +x start.sh
 
-echo "请执行 $(pwd) 下的 start.sh 脚本来运行服务，并通过配置 Nginx 进行反向代理。"
+cat << "EOF" > stop.sh
+#!/bin/bash
+clear
+
+SERVICE_PID=\$(ps aux | grep '[p]ython main.py' | awk '{print \$2}')
+
+if [ -z "\$SERVICE_PID" ]; then
+    echo "未找到正在运行的服务进程。"
+else
+    kill "\$SERVICE_PID"
+    echo "服务进程已终止，PID: \$SERVICE_PID"
+fi
+EOF
+
+chmod +x stop.sh
+
+echo "配置 NGINX 进行反向代理，执行 $(pwd) 下的 start.sh 脚本来运行服务，stop.sh 脚本来停止服务。"

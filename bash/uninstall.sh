@@ -2,7 +2,7 @@
 clear
 FILECODEBOX_DIR="/usr/local/FileCodeBox"
 FILECODEBOX_DATA_DIR="/usr/local/FileCodeBox/data"
-BACKUP_DIR="/opt/filecodebox_backup_$(date +%Y%m%d_%H%M%S)"
+BACKUP_DIR="/opt/filecodebox_backup_$(date +%Y%m%d"
 
 SERVICE_PID=$(ps aux | grep '[p]ython main.py' | awk '{print $2}')
 if [ -n "$SERVICE_PID" ]; then

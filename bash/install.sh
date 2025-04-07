@@ -44,7 +44,8 @@ if [ -f "requirements.txt" ]; then
     pip install -r requirements.txt
     echo "依赖包安装完成。"
 else
-    echo "未找到 requirements.txt 文件，请确保该文件存在于当前目录。"
+    echo "未找到 requirements.txt 文件，脚本终止。"
+    echo 0
 fi
 
 cat << "EOF" > start.sh

@@ -12,7 +12,7 @@ else
 fi
 
 if [ -d "$FILECODEBOX_DATA_DIR" ]; then
-    FILE_COUNT=$(find "$FILECODEBOX_DATA_DIR" -type f | wc -l)
+    FILE_COUNT=$(find "$FILECODEBOX_DATA_DIR" -type f -print0 | grep -cz .)
     if [ "$FILE_COUNT" -gt 0 ]; then
         read -p "检测到数据文件，是否需要备份？(y/n): " answer
         if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then

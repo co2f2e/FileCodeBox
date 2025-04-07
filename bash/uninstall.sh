@@ -17,7 +17,7 @@ if [ -d "$FILECODEBOX_DATA_DIR" ]; then
         read -p "检测到数据文件，是否需要备份？(y/n): " answer
         if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
             mkdir -p "$BACKUP_DIR"
-            find "$FILECODEBOX_DATA_DIR" -type f -exec cp --parents {} "$BACKUP_DIR" \;
+            find "$FILECODEBOX_DATA_DIR" -type f -exec cp {} "$BACKUP_DIR" \;
             if [ "$(ls -A "$BACKUP_DIR")" ]; then
                 echo "✅ 文件成功备份到：$BACKUP_DIR"
             else

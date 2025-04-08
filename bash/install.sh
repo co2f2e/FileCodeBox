@@ -25,7 +25,7 @@ if [ -f "$FILE_PATH" ]; then
     sed -i "s/0.0.0.0/127.0.0.1/g" "$FILE_PATH"
 else
     echo "$FILE_PATH 文件不存在，脚本终止。"
-    echo 0
+    exit 0
 fi
 
 if ! dpkg -l | grep -q python3-venv; then
@@ -45,7 +45,7 @@ if [ -f "requirements.txt" ]; then
     echo "依赖包安装完成。"
 else
     echo "未找到 requirements.txt 文件，脚本终止。"
-    echo 0
+    exit 0
 fi
 
 cat << "EOF" > start.sh

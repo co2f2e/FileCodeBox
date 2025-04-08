@@ -45,7 +45,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileSharing/main/bash/u
 ```bash
 https://yourdomain
 ```
-* 后台地址
+* 后台登录地址
 ```bash
 https://yourdomain/#/login
 ```

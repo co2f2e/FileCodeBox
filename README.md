@@ -47,7 +47,7 @@ https://yourdomain
 ```
 * 后台地址
 ```bash
-https://yourdomain/#/admin
+https://yourdomain/#/login
 ```
 ## 注意
 初次使用务必修改密码`FileCodeBox2023`

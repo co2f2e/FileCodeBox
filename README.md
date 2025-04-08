@@ -52,4 +52,6 @@ https://yourdomain/#/admin
 ## 注意
 初次使用务必修改密码`FileCodeBox2023`
 ## 测试环境
-Debian12,NGINX,SSL
+* Debian12
+* NGINX
+* SSL

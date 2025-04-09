@@ -11,7 +11,6 @@ if ! command -v git &>/dev/null; then
     sudo apt install -y git
 fi
 
-
 cd /usr/local
 if [ ! -d "FileCodeBox" ]; then
     git clone https://github.com/vastsa/FileCodeBox.git

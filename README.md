@@ -22,7 +22,7 @@ FileCodeBox 是一个基于 FastAPI + Vue3 开发的轻量级文件分享工具�
 ## 使用
 * 安装
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileSharing/main/bash/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/install.sh)
 ```
 * 启动服务
 ```bash
@@ -38,7 +38,7 @@ bash /usr/local/FileCodeBox/stop.sh
 ```
 * 卸载
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileSharing/main/bash/uninstall.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/uninstall.sh)
 ```
 ## 访问
 * 访问地址

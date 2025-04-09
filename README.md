@@ -28,6 +28,16 @@ bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/i
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/co2f2e/FileCodeBox/main/bash/uninstall_filecodebox.sh)
 ```
+### 服务管理命令
+| 操作         | 命令                                                        |
+|--------------|-------------------------------------------------------------|
+| 启动服务     | ```sudo systemctl start filecodebox```                      |
+| 停止服务     | ```sudo systemctl stop filecodebox```                       |
+| 重启服务     | ```sudo systemctl restart filecodebox```                    |
+| 查看状态     | ```sudo systemctl status filecodebox```                     |
+| 查看日志     | ```sudo journalctl -u filecodebox -f```                     |
+| 开机自启动   | ```sudo systemctl enable filecodebox```                     |
+| 关闭开机启动 | ```sudo systemctl disable filecodebox```                    |
 ## 访问
 * 访问地址
 ```bash
@@ -43,14 +53,3 @@ https://yourdomain/#/login
 * Debian12
 * NGINX
 * SSL
-
-### 服务管理命令
-| 操作         | 命令                                                        |
-|--------------|-------------------------------------------------------------|
-| 启动服务     | ```sudo systemctl start filecodebox```                      |
-| 停止服务     | ```sudo systemctl stop filecodebox```                       |
-| 重启服务     | ```sudo systemctl restart filecodebox```                    |
-| 查看状态     | ```sudo systemctl status filecodebox```                     |
-| 查看日志     | ```sudo journalctl -u filecodebox -f```                     |
-| 开机自启动   | ```sudo systemctl enable filecodebox```                     |
-| 关闭开机启动 | ```sudo systemctl disable filecodebox```                    |

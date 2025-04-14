@@ -38,7 +38,7 @@ green "下面将展示上传到本地存储的文件："
 find "$BACKUP_DIR" -type f -exec basename {} \;
 echo
 
-read -p "$(yellow '这些文件是否需要备份？(y/n'): " answer
+read -p "$(yellow "这些文件是否需要备份？(y/n)")" answer
 
 stop_and_disable_service() {
     green "停止并禁用服务 $SERVICE_NAME..."

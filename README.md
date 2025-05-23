@@ -7,7 +7,7 @@ FileCodeBox 是一个基于 FastAPI + Vue3 开发的轻量级文件分享工具�
 
 ## NGINX配置
 ```bash
-    location = / {
+    location / {
         proxy_pass  http://127.0.0.1:12345;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
